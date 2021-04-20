@@ -11,17 +11,13 @@ public class project {
 		System.setProperty("webdriver.chrome.driver", "/dev/Webdrivers/chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		
-		EbayBase ebay = new EbayBase(driver);
+		HomePage ebay = new HomePage(driver);
 		
 		ebay.connectHome();
 		
-		ebay.signin();
-		Thread.sleep(1200);
-		ebay.connectHome();
+		Thread.sleep(1000);
 		
-		ebay.dailyDeals();
-		Thread.sleep(1200);
-		ebay.connectHome();
+		ebay.expandMotors("Classics");
 		
 	}
 }

@@ -86,39 +86,84 @@ public class HomePage extends EbayBase {
 		menuOption.click();
 	}
 	
-	public void expandFashion() {
-		
+	public void expandFashion(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Fashion"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 
-	public void expandElectronics() {
-	
+	public void expandElectronics(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Electronics"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 	
-	public void expandCollectiblesAndArt() {
-		
+	public void expandCollectiblesAndArt(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Collectibles & Art"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 	
-	public void expandHomeAndGarden() {
-		
+	public void expandHomeAndGarden(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Home & Garden"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 	
-	public void expandSportingGoods() {
-		
+	public void expandSportingGoods(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Sporting Goods"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 	
-	public void expandToys() {
-		
+	public void expandToys(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Toys"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 	
-	public void expandBusinessAndIndustrial() {
-		
+	public void expandBusinessAndIndustrial(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Business & Industrial"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 	
-	public void expandMusic() {
-		
+	public void expandMusic(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Music"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 	
-	public void expandDeals() {
-		
+	public void expandDeals(String selection) {
+		WebElement menu = driver.findElement(By.linkText("Deals"));
+		builder.moveToElement(menu).build().perform();
+		WebDriverWait wait = new WebDriverWait(driver, 5);
+		wait.until(ExpectedConditions.presenceOfElementLocated(By.linkText(selection)));
+		WebElement menuOption = driver.findElement(By.linkText(selection));
+		menuOption.click();
 	}
 }

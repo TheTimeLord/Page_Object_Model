@@ -46,6 +46,71 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 			box3.click();
 	}
 	
+	public void price(Integer lower, Integer upper) {
+		WebElement box = driver.findElement(By.id("_mPrRngCbx"));
+		WebElement textbox1 = driver.findElement(By.name("_udlo"));
+		WebElement textbox2 = driver.findElement(By.name("_udhi"));
+
+		textbox1.sendKeys(lower.toString());
+		textbox2.sendKeys(upper.toString());
+	}
+	
+	public void buyingFormats(boolean auction, boolean now, boolean ads) {
+		WebElement box1 = driver.findElement(By.id("LH_Auction"));
+		WebElement box2 = driver.findElement(By.id("LH_BIN"));
+		WebElement box3 = driver.findElement(By.id("LH_CAds"));
+		
+		if(auction)
+			box1.click();
+		if(now)
+			box2.click();
+		if(ads)
+			box3.click();
+	}
+	
+	public void condition(boolean isNew, boolean used, boolean unk) {
+		WebElement box1 = driver.findElement(By.id("LH_ItemConditionNew"));
+		WebElement box2 = driver.findElement(By.id("LH_ItemConditionUsed"));
+		WebElement box3 = driver.findElement(By.id("LH_ItemConditionNS"));
+		
+		if(isNew)
+			box1.click();
+		if(used)
+			box2.click();
+		if(unk)
+			box3.click();
+	}
+	
+	public void listings(int timeframe, int time) {
+		WebElement box = driver.findElement(By.name("LH_Time"));
+		Select timeWindow = new Select(driver.findElement(By.name("_ftrt")));
+		Select timeAmount = new Select(driver.findElement(By.name("_ftrv")));
+		
+		timeWindow.selectByIndex(timeframe);
+		timeAmount.selectByIndex(time);
+	}
+	
+	public void numBids(Integer lower, Integer upper) {
+		WebElement box = driver.findElement(By.name("LH_NOB"));
+		WebElement textbox1 = driver.findElement(By.name("_sabdlo"));
+		WebElement textbox2 = driver.findElement(By.name("_sabdhi"));
+
+		box.click();
+		textbox1.sendKeys(lower.toString());
+		textbox2.sendKeys(upper.toString());
+	}
+	
+	public void multiListing(Integer lower, Integer upper) {
+		WebElement box = driver.findElement(By.name("LH_MIL"));
+		WebElement textbox1 = driver.findElement(By.name("_samilow"));
+		WebElement textbox2 = driver.findElement(By.name("_samihi"));
+
+		box.click();
+		textbox1.sendKeys(lower.toString());
+		textbox2.sendKeys(upper.toString());
+	}
+	
+	// TODO: finish methods
 	
 	
 }

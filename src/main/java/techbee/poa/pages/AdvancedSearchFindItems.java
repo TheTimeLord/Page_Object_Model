@@ -51,6 +51,7 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 		WebElement textbox1 = driver.findElement(By.name("_udlo"));
 		WebElement textbox2 = driver.findElement(By.name("_udhi"));
 
+		box.click();
 		textbox1.sendKeys(lower.toString());
 		textbox2.sendKeys(upper.toString());
 	}
@@ -86,6 +87,7 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 		Select timeWindow = new Select(driver.findElement(By.name("_ftrt")));
 		Select timeAmount = new Select(driver.findElement(By.name("_ftrv")));
 		
+		box.click();
 		timeWindow.selectByIndex(timeframe);
 		timeAmount.selectByIndex(time);
 	}
@@ -110,7 +112,108 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 		textbox2.sendKeys(upper.toString());
 	}
 	
-	// TODO: finish methods
+	public void itemsListedAsLots() {
+		WebElement box = driver.findElement(By.id("LH_Lots"));
+		box.click();
+	}
 	
+	public void saleItems() {
+		WebElement box = driver.findElement(By.id("LH_SaleItems"));
+		box.click();
+	}
 	
+	public void bestOffer() {
+		WebElement box = driver.findElement(By.id("LH_BO"));
+		box.click();
+	}
+	
+	public void ebayForCharity() {
+		WebElement box = driver.findElement(By.id("LH_Charity"));
+		box.click();
+	}
+	
+	public void freeShipping() {
+		WebElement box = driver.findElement(By.id("LH_FS"));
+		box.click();
+	}
+	
+	public void localPickup() {
+		WebElement box = driver.findElement(By.id("LH_LPickup"));
+		box.click();
+	}
+	
+	public void locationDistance(int dist, Integer zip) {
+		WebElement button = driver.findElement(By.id("LH_Located"));
+		Select chooseDist = new Select(driver.findElement(By.name("_sadis")));
+		WebElement zipBox = driver.findElement(By.name("_stpos"));
+		
+		button.click();
+		chooseDist.selectByIndex(dist);
+		zipBox.sendKeys(zip.toString());
+	}
+	
+	public void preffetedLocation(int location) {
+		WebElement button = driver.findElement(By.id("LH_PrefLocRadio"));
+		Select locationChoice = new Select(driver.findElement(By.id("_sargnSelect")));
+		
+		button.click();
+		locationChoice.selectByIndex(location);
+	}
+	
+	public void locatedIn(String country) {
+		WebElement button = driver.findElement(By.id("LH_LocatedInRadio"));
+		Select countryChoice = new Select(driver.findElement(By.name("_salic")));
+		
+		button.click();
+		countryChoice.selectByVisibleText(country);
+	}
+	
+	public void specificSellers(boolean include, String seller) {
+		WebElement button1 = driver.findElement(By.id("_fss"));
+		WebElement button2 = driver.findElement(By.id("LH_SpecificSeller_id"));
+		Select inclExcl = new Select(driver.findElement(By.id("_saslop")));
+		WebElement textbox = driver.findElement(By.id("_sasl"));
+		
+		button1.click();
+		button2.click();
+		if(include)
+			inclExcl.selectByIndex(0);
+		else
+			inclExcl.selectByIndex(1);
+		textbox.sendKeys(seller);
+	}
+	
+	public void savedSeller() {
+		WebElement button1 = driver.findElement(By.id("_fss"));
+		WebElement button2 = driver.findElement(By.id("LH_FavSellers_id"));
+		button1.click();
+		button2.click();
+	}
+	
+	public void sellerEbay() {
+		WebElement button1 = driver.findElement(By.id("_fss"));
+		WebElement button2 = driver.findElement(By.id("LH_SellerWithStore_id"));
+		button1.click();
+		button2.click();
+	}
+	
+	public void sortBy(int choice) {
+		Select match = new Select(driver.findElement(By.id("LH_SORT_BY")));
+		match.selectByIndex(choice);
+	}
+	
+	public void viewResults(int choice) {
+		Select match = new Select(driver.findElement(By.id("LH_VIEW_RESULTS_AS")));
+		match.selectByIndex(choice);
+	}
+	
+	public void resultsPerPage(int choice) {
+		Select match = new Select(driver.findElement(By.id("LH_IPP")));
+		match.selectByIndex(choice);
+	}
+	
+	public void clearOptions() {
+		WebElement ele = driver.findElement(By.linkText("Clear options"));
+		ele.click();
+	}
 }

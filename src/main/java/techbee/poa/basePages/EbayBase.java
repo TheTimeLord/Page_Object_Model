@@ -15,6 +15,7 @@ public class EbayBase {
 	public EbayBase(WebDriver d) {
 		driver = d;
 		builder = new Actions(d);
+		driver.manage().window().maximize();
 	}
 	
 	// Header Methods

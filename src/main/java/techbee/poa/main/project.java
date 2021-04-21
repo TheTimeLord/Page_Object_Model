@@ -17,7 +17,7 @@ public class project {
 		
 		Thread.sleep(1000);
 		
-		ebay.expandMotors("Classics");
+		ebay.advancedSearch();
 		
 	}
 }

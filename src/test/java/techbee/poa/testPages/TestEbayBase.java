@@ -11,8 +11,8 @@ import techbee.poa.pages.EbayBase;
 
 public class TestEbayBase {
 
-	static WebDriver driver = null;
-	static EbayBase ebay = null;
+	private static WebDriver driver = null;
+	private static EbayBase ebay = null;
 	
 	@Before
 	public void initialize() {

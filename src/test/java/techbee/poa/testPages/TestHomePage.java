@@ -10,8 +10,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import techbee.poa.pages.HomePage;
 
 public class TestHomePage {
-	static WebDriver driver = null;
-	static HomePage home = null;
+	
+	private static WebDriver driver = null;
+	private static HomePage home = null;
 	
 	@Before
 	public void initialize() {

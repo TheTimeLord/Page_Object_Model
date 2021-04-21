@@ -169,14 +169,15 @@ public class HomePage extends SearchBar {
 		menuOption.click();
 	}
 	
-	// TODO: Today's Deal, fix overloaded method
-	
+	// TODO: Today's Deal, fix and understand what the requirements for this are
+
+/*
 	public void todaysDeals() {
-		WebElement ele = driver.findElement(By.linkText("Today's Deals - All With Free Shipping"));
+		WebElement ele = driver.findElement(By.linkText("Today's Deals – All With Free Shipping"));
 		ele.click();
 	}
 
-/*
+
 	public void todaysDeals(int selection) throws InterruptedException {
 		WebElement itemList = driver.findElement(By.id("items_list1"));
 		List<WebElement> elements = itemList.findElements(By.className("hl-image"));

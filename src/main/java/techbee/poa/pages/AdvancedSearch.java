@@ -40,4 +40,8 @@ public class AdvancedSearch extends EbayBase {
 		ele.click();
 	}
 	
+	public void connectAdvancedSearch() {
+		driver.get("https://www.ebay.com/sch/ebayadvsearch");
+	}
+	
 }

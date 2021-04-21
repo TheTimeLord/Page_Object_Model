@@ -1,4 +1,4 @@
-package techbee.poa.basePages;
+package techbee.poa.pages;
 
 import org.openqa.selenium.WebDriver;
 

@@ -4,7 +4,7 @@ package techbee.poa.main;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-import techbee.poa.basePages.*;
+import techbee.poa.pages.*;
 
 public class project {
 	public static void main(String[] args) throws InterruptedException {

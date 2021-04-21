@@ -15,12 +15,12 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 		button.click();
 	}
 	
-	public void includeKeywords(String keywords, int order) {
+	public void includeKeywords(String keywords, String order) {
 		WebElement textbox = driver.findElement(By.id("_nkw"));
 		textbox.sendKeys(keywords);
 		
 		Select orderType = new Select(driver.findElement(By.id("_in_kw")));
-		orderType.selectByIndex(order);
+		orderType.selectByVisibleText(order);
 	}
 	
 	public void excludeKeywords(String keywords) {
@@ -33,17 +33,25 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 		category.selectByVisibleText(cat);
 	}
 	
-	public void searchIncluding(boolean titleDesc, boolean compList, boolean soldList) {
+	public void searchIncluding(int choice) {
 		WebElement box1 = driver.findElement(By.id("LH_TitleDesc"));
 		WebElement box2 = driver.findElement(By.id("LH_Complete"));
 		WebElement box3 = driver.findElement(By.id("LH_Sold"));
 		
-		if(titleDesc)
-			box1.click();
-		if(compList)
-			box2.click();
-		if(soldList)
-			box3.click();
+		switch(choice) {
+			case 1:
+				box1.click();
+				break;
+			case 2:
+				box2.click();
+				break;
+			case 3:
+				box3.click();
+				break;
+			default:
+				break;
+					
+		}
 	}
 	
 	public void price(Integer lower, Integer upper) {
@@ -61,25 +69,34 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 		WebElement box2 = driver.findElement(By.id("LH_BIN"));
 		WebElement box3 = driver.findElement(By.id("LH_CAds"));
 		
-		if(auction)
-			box1.click();
-		if(now)
-			box2.click();
 		if(ads)
 			box3.click();
+		else {
+			if(auction)
+				box1.click();
+			if(now)
+				box2.click();
+		}
 	}
 	
-	public void condition(boolean isNew, boolean used, boolean unk) {
+	public void condition(int choice) {
 		WebElement box1 = driver.findElement(By.id("LH_ItemConditionNew"));
 		WebElement box2 = driver.findElement(By.id("LH_ItemConditionUsed"));
 		WebElement box3 = driver.findElement(By.id("LH_ItemConditionNS"));
-		
-		if(isNew)
-			box1.click();
-		if(used)
-			box2.click();
-		if(unk)
-			box3.click();
+			
+		switch(choice) {
+			case 1:
+				box1.click();
+				break;
+			case 2:
+				box2.click();
+				break;
+			case 3:
+				box3.click();
+				break;
+			default:
+				break;
+		}
 	}
 	
 	public void listings(int timeframe, int time) {
@@ -149,6 +166,7 @@ public class AdvancedSearchFindItems extends AdvancedSearch {
 		
 		button.click();
 		chooseDist.selectByIndex(dist);
+		zipBox.clear();
 		zipBox.sendKeys(zip.toString());
 	}
 	

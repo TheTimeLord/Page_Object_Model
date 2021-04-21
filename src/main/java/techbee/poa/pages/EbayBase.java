@@ -20,83 +20,84 @@ public class EbayBase {
 	
 	// Header Methods
 	
-	public void clickSignin() {
+	public void signin() {
 		WebElement ele = driver.findElement(By.linkText("Sign in"));
 		ele.click();
 	}
 	
-	public void clickDailyDeals() {
+	public void dailyDeals() {
 		WebElement ele = driver.findElement(By.linkText("Daily Deals"));
 		ele.click();
 	}
 	
-	public void clickBrandOutlet() {
+	public void brandOutlet() {
 		WebElement ele = driver.findElement(By.linkText("Brand Outlet"));
 		ele.click();
 	}
 	
-	public void clickSell() {
+	public void sell() {
 		WebElement ele = driver.findElement(By.linkText("Sell"));
 		ele.click();
 	}
 	
-	public void clickWatchlist() {
+	public void watchlist() {
 		WebElement ele = driver.findElement(By.linkText("Watchlist"));
 		ele.click();
 	}
 	
-	public void clickMyEbay() {
+	public void myEbay() {
 		WebElement ele = driver.findElement(By.linkText("My eBay"));
 		ele.click();
 	}
 	
-	public void clickNotifications() {
+	public void notifications() {
 		WebElement ele = driver.findElement(By.id("gh-Alerts-i"));
 		ele.click();
 	}
 	
-	public void clickShoppingCart() {
+	public void shoppingCart() {
 		WebElement ele = driver.findElement(By.className("gh-cart-icon"));
 		ele.click();
 	}
 	
 	// Footer methods
-	public void clickAboutEbay() {
-		WebElement ele = driver.findElement(By.linkText("About Ebay"));
+	
+	public void aboutEbay() {
+		WebElement ele = driver.findElement(By.linkText("About eBay"));
 		ele.click();
 	}
 	
-	public void clickAnnouncments() {
+	public void announcments() {
 		WebElement ele = driver.findElement(By.linkText("Announcements"));
 		ele.click();
 	}
 	
-	public void clickCommunity() {
+	public void community() {
 		WebElement ele = driver.findElement(By.linkText("Community"));
 		ele.click();
 	}
 	
-	public void clickSecurity() {
-		WebElement ele = driver.findElement(By.linkText("Security"));
+	public void securityCenter() {
+		WebElement ele = driver.findElement(By.linkText("Security center"));
 		ele.click();
 	}
 	
-	public void clickSellerCenter() {
+	public void sellerCenter() {
 		WebElement ele = driver.findElement(By.linkText("Seller Center"));
 		ele.click();
 	}
 	
-	public void clickPolicies() {
+	public void policies() {
 		WebElement ele = driver.findElement(By.linkText("Policies"));
 		ele.click();
 	}
 	
-	public void clickAffiliates() {
+	public void affiliates() {
 		WebElement ele = driver.findElement(By.linkText("Affiliates"));
 		ele.click();
 	}
 	
-	public void clickHelpAndContact() {
+	public void helpAndContact() {
 		WebElement ele = driver.findElement(By.linkText("Help & Contact"));
 		ele.click();
 	}

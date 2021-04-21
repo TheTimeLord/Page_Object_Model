@@ -6,10 +6,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class HomePage extends EbayBase {
+public class HomePage extends SearchBar {
 	public HomePage(WebDriver d) {
 		super(d);
 	}
@@ -195,35 +194,8 @@ public class HomePage extends EbayBase {
 		elements.get(selection).click();
 	}
 */
-
-	
-	// TODO: Search, Search by Category
-	
-	public void search(String input) {
-		WebElement searchbar = driver.findElement(By.id("gh-ac"));
-		WebElement button = driver.findElement(By.id("gh-btn"));
-		searchbar.sendKeys(input);
-		button.click();
-	}
-	
-	public void search(String input, String cat) {
-		WebElement searchbar = driver.findElement(By.id("gh-ac"));
-		WebElement button = driver.findElement(By.id("gh-btn"));
-		Select category = new Select(driver.findElement(By.id("gh-cat")));
-		
-		category.selectByVisibleText(cat);
-		searchbar.sendKeys(input);
-		button.click();
-	}
-	
-	// TODO: Sign in
-	
-	// TODO: Advanced Search
-	
 	public void advancedSearch() {
 		WebElement ele = driver.findElement(By.id("gh-as-a"));
 		ele.click();
 	}
-	
-	
 }

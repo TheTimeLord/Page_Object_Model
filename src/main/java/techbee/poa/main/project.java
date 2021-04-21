@@ -17,7 +17,10 @@ public class project {
 		
 		Thread.sleep(1000);
 		
-		ebay.advancedSearch();
+		ebay.search("iphone");
+		ProductsPage prod = new ProductsPage(driver);
+		
+		prod.selectProduct(0);
 		
 	}
 }
